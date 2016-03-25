@@ -16,8 +16,9 @@ import com.web.mvvm.utils.ResponseJsonUtils;
 public class SearchServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 6649497110388061333L;
-	public List<String> results = Arrays.asList("JackWhaton", "Chiclaim", "eburke", "pforhan", "swankjesse", "rjrjr",
-			"rcdickerson", "adriancole", "swanson", "Turbo87");
+	public List<String> results = Arrays.asList("Apple", "Blank", "Cheese", "Denstiny", "Eason", "Fuck", "Google",
+			"Hoodoo", "JackWhaton", "Chiclaim", "Twitter", "Facebook", "Baidu", "Sohu", "Sina", "Qihu", "Tencent",
+			"Alibaba", "Ebay", "Amazon", "Yahoo", "Microsoft");
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
