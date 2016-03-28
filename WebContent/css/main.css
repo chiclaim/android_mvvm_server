@@ -122,10 +122,10 @@ input[type=button] {
     font-size:10pt;
 }
 #fileinfo,#error,#error2,#abort,#warnsize {
-    color:#aaa;
+    color:#ff000000;
     display:none;
-    font-size:10pt;
-    font-style:italic;
+    font-size:20pt;
+    font-style:bold;
     margin-top:10px;
 }
 #progress {

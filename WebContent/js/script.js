@@ -2,7 +2,7 @@
 var iBytesUploaded = 0;
 var iBytesTotal = 0;
 var iPreviousBytesLoaded = 0;
-var iMaxFilesize = 1048576; // 1MB
+var iMaxFilesize = 8388608; // 8MB  //1048576
 var oTimer = 0;
 var sResultFileSize = '';
 
