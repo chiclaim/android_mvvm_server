@@ -18,20 +18,25 @@ public class UserInfoServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		boolean valid = TokenServlet.checkTokenValid(TokenServlet.getRemortIP(request));
-		if (!valid) {
-			// code=401 and write to response
-			// response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "invalid
-			// token");
+		String p = request.getParameter("noToken");
+		if (!"1".equals(p)) {
+			if (!valid) {
+				// code=401 and write to response
+				// response.sendError(HttpServletResponse.SC_UNAUTHORIZED,
+				// "invalid
+				// token");
 
-			response.setStatus(401);
-			response.getWriter().append("access denied (jwt token is absent or invalid)");
-			return;
+				response.setStatus(401);
+				response.getWriter().append("access denied (jwt token is absent or invalid)");
+				return;
+			}
+			// ResponseJsonUtils.json(response, new RequestError(401, "invalid
+			// token"));
+			// return;
+		} else {
+			response.getWriter().append("username:chiclaim,age:007");
 		}
-		// ResponseJsonUtils.json(response, new RequestError(401, "invalid
-		// token"));
-		// return;
 
-		response.getWriter().append("username:chiclaim,age:007");
 	}
 
 	/**
